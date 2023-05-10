@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/5c31f508b8.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <header>
+        <a href="home.html" class="logo">Pudding<span>Fest</span></a>
+        <div class="navigation">
+            <div class="navigation-items">
+                <a href="home.html">HOME</a>
+                <a href="event.html">EVENT</a>
+                <a href="contact.html">CONTACT US</a>
+                <i class="fa-solid fa-x" onclick="closemenu()"></i>
+            </div>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </div>
+    </header>
+
+    <section class="home">
+
+        <video class="video-slide active" src="images/BG1.mp4" autoplay muted loop></video>
+        <video class="video-slide" src="images/BG2.mp4" autoplay muted loop></video>
+        <video class="video-slide" src="images/BG3.mp4" autoplay muted loop></video>
+        <video class="video-slide" src="images/BG4.mp4" autoplay muted loop></video>
+
+        <div class="content">
+            <h1>Pudding<span>Fest</span></h1>
+            <p>PuddingFest merupakan sebuah pameran teknologi garapan PT Meksiko. <br>
+                Setiap tahunnya Pt Meksiko selalu mengadakan event seperti ini <br>
+                akan ada banyak teknologo teknologi terbaru yang akan dipamerkan, <br>
+                dan juga akan ada beberapa tokoh terkenal yang akan <br>
+                membawakan seminar teknologi di acara PuddingFest tahun ini.
+            </p>
+            <a href="event.html">Explore More</a>
+        </div>
+
+        <div class="socialmedia">
+            <a href="https://www.linkedin.com/company/bina-nusantara-computer-club/mycompany//"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/bnccbinus/"><i class="fab fa-instagram"></i></a>
+            <a href="https://youtube.com/@binanusantaracomputerclub2771"><i class="fab fa-youtube"></i></a>
+        </div>
+
+        <div class="slider">
+            <div class="sliderButton activate"></div>
+            <div class="sliderButton"></div>
+            <div class="sliderButton"></div>
+            <div class="sliderButton"></div>
+        </div>
+
+    </section>
+
+    <script>
+
+        //side menu
+        var sidemenu = document.querySelector(".navigation-items");
+    
+        function openmenu(){
+            sidemenu.style.right = "0";
+        }
+    
+        function closemenu(){
+            sidemenu.style.right = "-250px";
+        }
+
+       //sldier button
+       const button = document.querySelectorAll(".sliderButton");
+       const sldies = document.querySelectorAll(".video-slide");
+
+       var sliderNav = function(manual){
+
+        button.forEach((button) => {
+            button.classList.remove("active");
+        });
+
+        sldies.forEach((sldie) => {
+            sldie.classList.remove("active");
+        });
+
+        button[manual].classList.add("active");
+        sldies[manual].classList.add("active");
+       }
+
+       button.forEach((button, i) => {
+        button.addEventListener("click", () =>{
+            sliderNav(i);
+        });
+       });
+    
+    </script>
+
+</body>
+</html>

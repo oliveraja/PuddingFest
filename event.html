@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PuddingFestWeb</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+    <script src="https://kit.fontawesome.com/5c31f508b8.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">Pudding<span>Fest</span></a>
+        <div class="navigation">
+            <div class="navigation-items-event">
+                <a href="index.html">HOME</a>
+                <a href="event.html">EVENT</a>
+                <a href="contact.html">CONTACT US</a>
+                <i class="fa-solid fa-x" onclick="closemenu()"></i>
+            </div>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </div>
+    </header>
+
+    <section class="infoDetail">
+        <div class="detail">
+            <h1>Apa itu <span>Pudding</span><span>Fest?</span></h1> 
+            <p>PuddingFest merupakan sebuah pameran teknologi garapan PT Meksiko <br>
+                Setiap tahunnya Pt Meksiko selalu mengadakan event seperti ini <br>
+                akan ada banyak teknologo teknologi terbaru yang akan dipamerkan. <br>
+                Pada event event PuddingFest tahun tahun sebelumnya PT Meksiko <br>
+                menghadirkan beberapa tokoh terkenal untuk membawakan seminar antara lain <br>
+                CEO Tokopedia Bp. William Tanuwijaya, CEO Ternak Uang Raymond Chin, <br>
+                CEO Binar Academy Alamanda Shantika, serta CEO Bahaso.com Tyovan ari widagdo. <br>
+            </p>
+        </div>  
+
+        <!------------------- Slider Pembicara ------------------->
+
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><img src="images/amanda - Copy.png" /></div>
+                <div class="swiper-slide"><img src="images/raymond - Copy.png" /></div>
+                <div class="swiper-slide"><img src="images/tyovan - Copy.png" /></div>
+                <div class="swiper-slide"><img src="images/william - Copy.png" /></div>
+              </div>
+            <div class="swiper-pagination"></div>
+          </div>
+
+          <div class="timelineTag">
+            <h1>Timeline</h1>
+          </div>
+        
+          <div class="timeline">
+            <div class="container left-container">
+                <div class="text-box">
+                    <h2>Openning</h2>
+                    <small>6 Mei 2023</small>
+                    <p>Acara akan dibuka oleh Bp. Raja selaku CEO PT Meksiko.</p>
+                </div>
+            </div>
+        
+            <div class="container right-container">
+              <div class="text-box">
+                  <h2>Seminar oleh CEO GOJEK</h2>
+                  <small>7 Mei 2023 | 10.00</small>
+                  <p>Pada hari kedua akan ada sesi seminar yang akan dibawakan oleh Kevin Aluwi selaku CEO GOJEK yang akan berlangung pada jam 10 pagi.</p>
+              </div>
+          </div>
+        
+          <div class="container left-container">
+              <div class="text-box">
+                  <h2>Seminar oleh Menteri Pendidikan</h2>
+                  <small>7 Mei 2023 | 14.00</small>
+                  <p>Pada hari kedua akan ada sesi seminar yang akan dibawakan oleh Nadiem Makarim selaku Menteri Pendidikan yang akan berlangung pada jam 2 siang.</p>
+              </div>
+          </div>
+        
+          <div class="container right-container">
+              <div class="text-box">
+                  <h2>Closing</h2>
+                  <small>2018</small>
+                  <p>Acara penutupan akan ditutup oleh Bp. Raja selaku CEO PT Meksiko, dan akan menhadirkan beberapa band terkenal di Indonesia.</p>
+              </div>
+          </div>
+    </section>
+
+    <!------------------- Form Registration ------------------->
+
+    <div class="formTag">
+        <h1>Form Registration</h1>
+    </div>
+
+    <div class="form">
+        <form name="sign-up-form" action="" method="post" autocomplete="off">
+            <p class="success register-succress"></p>
+            <label>Email<span>Email harus ada karakter '@'</span></label>
+            <input type="text" name="email">
+            <p class="error email-eror"></p>
+
+            <label>Name <span>Nama minimal 3 karakter</span></label>
+            <input type="text" name="name">
+            <p class="error name-eror"></p>
+
+            <label>Phone Number <span>2 digit pertama harus '08' dan tidak lebih
+                dari 14 digit</span></label>
+            <input type="text" name="phone">
+            <p class="error phone-eror"></p>
+
+            <label>Event <span>Silahkan masukan event apa yang anda ingin ikuti</span></label>
+            <input type="text" name="phone">
+            <p class="error phone-eror"></p>
+
+            <input type="submit" name="register-submition" value="Register">
+
+            <p class="error register-eror"></p>
+        </form>
+    </div>
+
+    <!------------------- FOOTER ------------------->
+
+    <section class="footer">
+        <p>PuddingFest. <br> @PTMeksiko-2023 <br> BNCC2201027 </p>
+            <div class="icons">
+                <a href="https://www.linkedin.com/company/bina-nusantara-computer-club/mycompany//"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/bnccbinus/"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://youtube.com/@binanusantaracomputerclub2771"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+    </section>
+
+    
+    <!------------------- Side Menu ------------------->
+    <script>
+        
+        var sidemenu = document.querySelector(".navigation-items-event");
+    
+        function openmenu(){
+            sidemenu.style.right = "0";
+        }
+    
+        function closemenu(){
+            sidemenu.style.right = "-250px";
+        }
+    </script>
+
+    <!------------------- Slider ------------------->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script> 
+
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        effect: "coverflow",
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: "auto",
+        coverflowEffect: {
+          rotate: 50,
+          stretch: 0,
+          depth: 100,
+          modifier: 1,
+          slideShadows: true,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+        },
+      });
+    </script>
+
+    <!------------------- Registration Form ------------------->
+    <script src="script.js"></script>
+
+</body>
+</html>

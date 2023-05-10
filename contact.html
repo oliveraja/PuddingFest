@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PuddingFestWeb</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+    <script src="https://kit.fontawesome.com/5c31f508b8.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">Pudding<span>Fest</span></a>
+        <div class="navigation">
+            <div class="navigation-items-event">
+                <a href="index.html">HOME</a>
+                <a href="event.html">EVENT</a>
+                <a href="contact.html">CONTACT US</a>
+                <i class="fa-solid fa-x" onclick="closemenu()"></i>
+            </div>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </div>
+    </header>
+
+    <section class="location">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.455154026909!2d106.78043807371999!3d-6.203532660766962!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f6c4a8e09f5d%3A0x29720d62d8b976c5!2sBina%20Nusantara%20Computer%20Club!5e0!3m2!1sen!2sid!4v1682427900749!5m2!1sen!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+
+    <div class="contactMe">
+        <div class="contactInfo">
+            <h1>Contact US</h1>
+            <p><i class="fa-solid fa-envelope"></i>PTMeksiko@gmail.com</p>
+            <p><i class="fa-solid fa-phone"></i>021-3332211</p>
+            <div class="socialmediaIcons">
+                <a href="https://www.linkedin.com/company/bina-nusantara-computer-club/mycompany//"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/bnccbinus/"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://youtube.com/@binanusantaracomputerclub2771"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!------------------- FOOTER ------------------->
+
+    <section class="footer">
+        <p>PuddingFest. <br> @PTMeksiko-2023 <br> BNCC2201027 </p>
+            <div class="icons">
+                <a href="https://www.linkedin.com/company/bina-nusantara-computer-club/mycompany//"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/bnccbinus/"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://youtube.com/@binanusantaracomputerclub2771"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+    </section>
+
+    <!------------------- Side Menu ------------------->
+    <script>
+        
+        var sidemenu = document.querySelector(".navigation-items-event");
+    
+        function openmenu(){
+            sidemenu.style.right = "0";
+        }
+    
+        function closemenu(){
+            sidemenu.style.right = "-250px";
+        }
+    </script>
+
+</body>
+</html>
